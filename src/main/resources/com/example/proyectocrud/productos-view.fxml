@@ -1,14 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
 
-</AnchorPane>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="912.0" spacing="10.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label text="Gestion de productos">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="43.0" prefWidth="892.0" spacing="10.0">
+         <children>
+            <Label text="Codigo: " />
+            <TextField fx:id="txtCodigo" prefHeight="26.0" prefWidth="180.0" />
+            <Label text="Nombre " />
+            <TextField fx:id="txtNombre" prefHeight="26.0" prefWidth="233.0" promptText="Nombre del producto" />
+         </children>
+      </HBox>
+      <HBox prefHeight="36.0" prefWidth="892.0" spacing="10.0">
+         <children>
+            <Label text="Precio: " />
+            <TextField fx:id="txtPrecio" prefHeight="26.0" prefWidth="187.0" promptText="0.00" />
+            <Label text="Stock" />
+            <TextField fx:id="txtStock" prefHeight="26.0" prefWidth="254.0" promptText="0" />
+         </children>
+      </HBox>
+      <HBox prefHeight="31.0" prefWidth="892.0" spacing="10.0">
+         <children>
+            <Label text="Categoria" />
+            <ComboBox fx:id="cmbCategoria" prefHeight="26.0" prefWidth="173.0" />
+            <Label text="Marca" />
+            <ComboBox fx:id="cmbMarca" prefHeight="26.0" prefWidth="253.0" />
+         </children>
+      </HBox>
+      <HBox prefHeight="36.0" prefWidth="892.0" spacing="10.0">
+         <children>
+            <Label text="Fecha: " />
+            <DatePicker fx:id="dtpFecha" prefHeight="26.0" prefWidth="191.0" />
+            <Label text="Descripcion" />
+            <TextField fx:id="txtDescripcion" prefHeight="26.0" prefWidth="216.0" promptText="Descripcion opcional" />
+         </children>
+      </HBox>
+      <HBox prefHeight="35.0" prefWidth="892.0" spacing="20.0">
+         <children>
+            <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+            <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardar" text="Guardar" />
+            <Button fx:id="btnActualizar" mnemonicParsing="false" onAction="#actualizar" text="Actualizar" />
+            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+         </children>
+      </HBox>
+      <Separator prefWidth="200.0" />
+      <Label text="Búsqueda y filtros">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="38.0" prefWidth="892.0" spacing="10.0">
+         <children>
+            <Label text="Codigo o nombre: " />
+            <TextField fx:id="txtCodigoNombre" promptText="Buscar..." />
+            <Label text="Categoria: " />
+            <ComboBox fx:id="cmbCategoriaFiltro" prefWidth="150.0" />
+         </children>
+      </HBox>
+      <HBox prefHeight="31.0" prefWidth="892.0" spacing="10.0">
+         <children>
+            <Label text="Desde " />
+            <DatePicker fx:id="dtpDesde" />
+            <Label text="Hasta " />
+            <DatePicker fx:id="dtpHasta" />
+         </children>
+      </HBox>
+      <HBox prefHeight="40.0" prefWidth="892.0" spacing="10.0">
+         <children>
+            <Label text="Precio minimo: " />
+            <TextField fx:id="txtPrecioMinimo" />
+            <Label text="Precio maximo: " />
+            <TextField fx:id="txtPrecioMaximo" />
+         </children>
+      </HBox>
+      <HBox prefHeight="41.0" prefWidth="892.0" spacing="10.0">
+         <children>
+            <CheckBox fx:id="chkExistencia" mnemonicParsing="false" text="Solo productos con existencia" />
+            <Label text="Ordenado por: " />
+            <ComboBox fx:id="cmbOrdenado" prefWidth="150.0" />
+         </children>
+      </HBox>
+      <HBox prefHeight="49.0" prefWidth="892.0" spacing="10.0">
+         <children>
+            <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#buscar" text="Buscar" />
+            <Button fx:id="btnLimpiarFiltros" mnemonicParsing="false" onAction="#limpiar" text="Limpiar filtros" />
+         </children>
+      </HBox>
+      <TableView fx:id="tblProductos" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Codigo " />
+          <TableColumn fx:id="colNombre" prefWidth="126.0" text="Nombre " />
+            <TableColumn fx:id="colCategoria" prefWidth="132.0" text="Categoria" />
+            <TableColumn fx:id="colMarca" prefWidth="149.0" text="Marca" />
+            <TableColumn fx:id="colPrecio" prefWidth="110.0" text="Precio" />
+            <TableColumn fx:id="colStock" prefWidth="153.0" text="Stock" />
+            <TableColumn fx:id="colFechaCreacion" prefWidth="146.0" text="Fecha creacion" />
+        </columns>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>
