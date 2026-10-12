@@ -5,8 +5,116 @@ import java.time.LocalDate;
 public class Producto {
 
     private int idProducto;
-    private String codigo;
 
+    public int getIdProducto() {
+        return idProducto;
+    }
+
+    public void setIdProducto(int idProducto) {
+        this.idProducto = idProducto;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(Double precio) {
+        this.precio = precio;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public LocalDate getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public void setFechaCreacion(LocalDate fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
+    }
+
+    public int getIdCategoria() {
+        return idCategoria;
+    }
+
+    public void setIdCategoria(int idCategoria) {
+        this.idCategoria = idCategoria;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public int getIdMarca() {
+        return idMarca;
+    }
+
+    public void setIdMarca(int idMarca) {
+        this.idMarca = idMarca;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public int getEstado() {
+        return estado;
+    }
+
+    public void setEstado(int estado) {
+        this.estado = estado;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    private String codigo;
+    private String nombre;
+    private Double precio;
+    private int stock;
+    private LocalDate fechaCreacion;
+
+    private int idCategoria;
+    private String categoria;
+
+    private int idMarca;
+    private String marca;
+
+    private int estado;
     public Producto(int idProducto, String codigo, String descripcion, String nombre, Double precio, int stock, LocalDate fechaCreacion, int idCategoria, String categoria, int idMarca, String marca, int estado) {
         this.idProducto = idProducto;
         this.codigo = codigo;
@@ -27,16 +135,5 @@ public class Producto {
     public Producto() {
     }
 
-    private String nombre;
-    private Double precio;
-    private int stock;
-    private LocalDate fechaCreacion;
 
-    private int idCategoria;
-    private String categoria;
-
-    private int idMarca;
-    private String marca;
-
-    private int estado;
 }

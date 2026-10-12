@@ -18,6 +18,14 @@ public class Marca {
         this.nombre = nombre;
     }
 
+    public Marca() {
+    }
+
+    public Marca(int idMarca, String nombre) {
+        this.idMarca = idMarca;
+        this.nombre = nombre;
+    }
+
     private int idMarca;
     private String nombre;
 }

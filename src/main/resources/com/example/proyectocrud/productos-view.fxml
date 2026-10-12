@@ -14,7 +14,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="912.0" spacing="10.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label text="Gestion de productos">
@@ -49,7 +48,7 @@
       <HBox prefHeight="36.0" prefWidth="892.0" spacing="10.0">
          <children>
             <Label text="Fecha: " />
-            <DatePicker fx:id="dtpFecha" prefHeight="26.0" prefWidth="191.0" />
+            <DatePicker fx:id="dtpFechaCreacion" prefHeight="26.0" prefWidth="191.0" />
             <Label text="Descripcion" />
             <TextField fx:id="txtDescripcion" prefHeight="26.0" prefWidth="216.0" promptText="Descripcion opcional" />
          </children>
