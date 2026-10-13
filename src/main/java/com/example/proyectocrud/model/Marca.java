@@ -28,4 +28,12 @@ public class Marca {
 
     private int idMarca;
     private String nombre;
+
+    /*
+     * El ComboBox usa toString() para mostrar cada elemento
+     * */
+    @Override
+    public String toString() {
+        return nombre;
+    }
 }

@@ -29,4 +29,11 @@ public class Categoria {
     private int idCategoria;
     private String nombre;
 
+    /*
+     * El ComboBox usa toString() para mostrar cada elemento
+     * */
+    @Override
+    public String toString() {
+        return nombre;
+    }
 }

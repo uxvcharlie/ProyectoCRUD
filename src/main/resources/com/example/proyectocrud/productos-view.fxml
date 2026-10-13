@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="912.0" spacing="10.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="912.0" spacing="10.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectocrud.controller.ProductosController">
    <children>
       <Label text="Gestion de productos">
          <font>
@@ -100,7 +100,7 @@
       </HBox>
       <HBox prefHeight="49.0" prefWidth="892.0" spacing="10.0">
          <children>
-            <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#buscar" text="Buscar" />
+            <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#buscarProductos" text="Buscar" />
             <Button fx:id="btnLimpiarFiltros" mnemonicParsing="false" onAction="#limpiar" text="Limpiar filtros" />
          </children>
       </HBox>
